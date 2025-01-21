@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 const { findStudentByEmail } = require('../models/student');
-const SECRET_KEY = 'your_secret_key';
+const SECRET_KEY = process.env.SECRET_KEY;
 
 const login = (req, res) => {
   const { email, password } = req.body;
