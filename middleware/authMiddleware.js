@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-const SECRET_KEY = 'your_secret_key'; // Ensure this matches the secret key used in registration and login
+const SECRET_KEY = process.env.SECRET_KEY; // Access the secret key from environment variables
 
 const authenticateToken = (req, res, next) => {
   const authHeader = req.headers['authorization'];
