@@ -1,10 +1,10 @@
 const db = require('./db');
 
 const createStudent = (student, callback) => {
-  const { name, contactDetails, email, address, password } = student;
+  const { firstName, lastName, email, address, password } = student;
   db.query(
-    'INSERT INTO Students (name, contactDetails, email, address, password) VALUES (?, ?, ?, ?, ?)',
-    [name, contactDetails, email, address, password],
+    'INSERT INTO Students (firstName, lastName, email, address, password) VALUES (?, ?, ?, ?, ?)',
+    [firstName, lastName, email, address, password],
     callback
   );
 };
